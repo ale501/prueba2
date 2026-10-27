@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Linux vs Windows: clasifica los comandos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ov full show" id="inv">
+  <div class="box">
+    <div class="emo">🐧 ⚔️ 🪟</div>
+    <h2>¡Te invitaron a jugar!</h2>
+    <p>Cada comando que cae es de Linux o de Windows. Clasifícalo antes de que toque el suelo. Tienes 3 vidas y cada vez irá más rápido y más difícil.</p>
+    <div class="chips"><span class="lin">← Linux</span><span class="win">Windows →</span></div>
+    <input id="nick2" maxlength="14" placeholder="Escribe tu apodo">
+    <button class="btn" id="go">Entrar a jugar</button>
+  </div>
+</div>
+<main>
+  <section class="card">
+    <div class="top">
+      <h1><b>Linux</b> vs <b>Windows</b></h1>
+      <span id="nivel">Nivel 1</span>
+      <div id="hearts"></div>
+      <button id="pz" title="Pausa (P)">⏸</button>
+    </div>
+    <div class="stage">
+      <canvas id="c" width="600" height="600"></canvas>
+      <div class="ov" id="pause">
+        <div class="box">
+          <div class="emo">⏸️</div>
+          <h2>Pausa</h2>
+          <p>El juego está detenido. Los demás jugadores siguen en sala.</p>
+          <button class="btn" id="resume">Continuar</button>
+          <button class="btn sec" id="rs1">Reiniciar partida</button>
+        </div>
+      </div>
+      <div class="ov" id="over">
+        <div class="box">
+          <div class="emo">💀</div>
+          <h2>Fin del juego</h2>
+          <div id="final">0</div>
+          <p id="overtxt"></p>
+          <button class="btn" id="rs2">Jugar de nuevo</button>
+        </div>
+      </div>
+    </div>
+    <div class="ctl">
+      <button id="bL">← Linux</button>
+      <button id="bW">Windows →</button>
+    </div>
+    <p class="hint">Flechas ← → para elegir · P o Esc para pausar</p>
+  </section>
+  <aside class="card">
+    <input id="nick" maxlength="14" placeholder="Tu apodo">
+    <div id="st">Conectando…</div>
+    <h3>🏆 Ranking en vivo</h3>
+    <ol id="rank"></ol>
+  </aside>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="juego.js"></script>
+</body>
+</html>
